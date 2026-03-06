@@ -21,8 +21,10 @@ def load_data(file_path):
                 Data[coursecode] = {
                     "Name": name,
                     "Credit": credit,
-                    "Lecturer": []
+                    "Lecturer": [lecturer]
                 }
+            else:
+                Data[coursecode]["Lecturer"].append(lecturer)
 
             if lecturer not in Summary: # 1
                 Summary[lecturer] = 0.0 # 1
@@ -34,3 +36,5 @@ Data = {}
 Summary = {}
 
 load_data("CprE_Subject.csv")
+
+print(Data)
