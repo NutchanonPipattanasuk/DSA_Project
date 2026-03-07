@@ -23,7 +23,7 @@ def load_data(file_path):
                     "Credit": credit,
                     "Lecturer": [lecturer]
                 }
-            else:
+            elif lecturer not in Data[coursecode]["Lecturer"]:
                 Data[coursecode]["Lecturer"].append(lecturer)
 
             if lecturer not in Summary: # 1
@@ -36,5 +36,3 @@ Data = {}
 Summary = {}
 
 load_data("CprE_Subject.csv")
-
-print(Data)
