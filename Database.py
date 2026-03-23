@@ -36,7 +36,6 @@ def load_data(file_path):
                 Summary[lecturer] = 0.0 # this take space O(number of unique lecturers) and time O(1)
             Summary[lecturer] += credit # 1
             
-            print(f"row{row}")
 
 #So data loading takes O(n) time where n is the number of lines in the file.
 #while it take space O(m) where m is the number of unique lecturers in the file.
