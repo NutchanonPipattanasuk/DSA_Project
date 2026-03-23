@@ -1,4 +1,5 @@
 import Database as db
+#get course information from database and print it in a readable format
 
 def find_course(course_code):
     Data = db.Data
